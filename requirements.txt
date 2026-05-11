@@ -1,0 +1,9 @@
+pandas 
+sqlalchemy
+pyodbc
+pyarrow
+scikit-learn
+category_encoders
+lightgbm
+matplotlib 
+optuna

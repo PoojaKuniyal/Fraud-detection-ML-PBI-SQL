@@ -64,16 +64,7 @@ Created:
 
 Implemented a **Star Schema** in Power BI Model View.
 
-
-                 Dim_Customer
-                      |
-                      |
-Dim_Card ---- Fact_Transactions ---- Dim_Merchant
-                      |
-                      |
-                  Dim_MCC
-                      |
-                  Dim_Date
+![Star Schema](Powerbi_model_view.png)
                   
 
 ### SQL Optimization

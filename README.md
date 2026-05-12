@@ -94,6 +94,14 @@ Applied indexing on key columns to improve:
 * Total Spend by Income Group
 * Transactions by Age Group
 
+#### Business Objective
+
+Provide executive-level insights into:
+•	Consumer spending patterns
+•	Revenue performance
+•	Customer demographics
+•	Transaction distribution
+
 ---
 
 ### 2. Fraud Operations & Transactional Risk Intelligence
@@ -107,7 +115,15 @@ Applied indexing on key columns to improve:
 * Top 10 High-Risk Merchant Categories
 * Weekend vs Weekday Transactions
 * Transactions by Card Type
-* Credit Score and Total Transactions
+* Credit Score vs Total Transactions
+
+#### Business Objective
+
+Enable fraud monitoring teams to:
+•	Identify risky merchant categories
+•	Analyze fraud transaction behavior
+•	Understand temporal fraud trends
+•	Monitor customer risk segments
 
 ---
 

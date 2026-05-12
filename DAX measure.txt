@@ -1,0 +1,42 @@
+1) Total Transactions = COUNT(fact_transaction[id])
+
+
+2) Fraud Transactions = CALCULATE(COUNTROWS(fact_transaction), fact_transaction[fraud_label]=True)
+
+
+3) Total Spend = SUM(fact_transaction[amount])
+
+
+4) Gross Network Revenue = SUM(fact_transaction[amount]) * 0.002
+
+Gross Network Revenue (The "Swipe" Fee)
+payment network (e.g MasterCard, Visa) earns a small percentage on every transaction. Assume - 0.2% network fee.
+
+
+5) Issuer Incentives = SUM(fact_transaction[amount]) * 0.0005
+
+payment network often pays banks (Issuers) to encourage card usage. Assume - 0.05% cost on all transactions.
+
+
+6) Net Revenue = [Gross Network Revenue] - [Issuer Incentives]
+
+This is what stays with payment network after paying out incentives.
+
+
+7) Age Group = 
+SWITCH(
+    TRUE(),
+    dim_customer[current_age] >= 20 && dim_customer[current_age] <= 29, "20-29",
+    dim_customer[current_age] >= 30 && dim_customer[current_age] <= 39, "30-39",
+    dim_customer[current_age] >= 40 && dim_customer[current_age] <= 49, "40-49",
+    dim_customer[current_age] >= 50 && dim_customer[current_age] <= 59, "50-59",
+    dim_customer[current_age] >= 60 && dim_customer[current_age] <= 69, "60-69",
+    dim_customer[current_age] >= 70 && dim_customer[current_age] <= 79, "70-79",
+    dim_customer[current_age] >= 80 && dim_customer[current_age] <= 89, "80-89",
+    dim_customer[current_age] >= 90 && dim_customer[current_age] <= 99, "90-99",
+    dim_customer[current_age] >= 100 && dim_customer[current_age] <= 105, "100-105",
+    "Unknown"
+)
+
+
+Merchant Category with high fraud risk - Filter on this visual ->top 10 mcc_description by fraud transaction 

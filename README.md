@@ -143,7 +143,25 @@ Created behavioral fraud-risk features:
 | Recall    | 0.6333 |
 
 ---
+## Project Architecture
 
+```text
+Raw Transaction Data
+           ↓
+Python ETL Pipeline
+           ↓
+SQL Server Database
+           ↓
+Fact & Dimension Tables
+           ↓
+Indexed SQL Tables   -> Views  -> ML pipeline (sampling) ->  Model Training
+          ↓
+Power BI Star Schema Model
+          ↓
+Interactive Dashboards
+```
+
+---
 ## Key Learnings
 
 * Large-scale SQL optimization

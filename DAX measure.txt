@@ -38,5 +38,9 @@ SWITCH(
     "Unknown"
 )
 
-
+8) Fraud percentage = DIVIDE(
+        [Fraud Transactions],
+        [Total Transactions],
+        0
+) * 100
 Merchant Category with high fraud risk - Filter on this visual ->top 10 mcc_description by fraud transaction 

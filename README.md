@@ -178,6 +178,13 @@ Interactive Dashboards
 ```
 
 ---
+#### Weekend vs Weekday fraud transaction 
+
+Fraudulent transactions tended to be higher on weekends than weekdays in most quarters, though this was not always the case.
+
+![Weekend](weekend_vs_weeday.png)
+
+---
 ## Key Learnings
 
 * Large-scale SQL optimization
